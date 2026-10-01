@@ -155,6 +155,48 @@ export const projects: Project[] = [
     links: [{ label: "Live site", href: "https://aidemos.com/", host: "aidemos.com", primary: true }],
     stack: ["Payload CMS", "PostgreSQL", "Lexical", "GitHub Actions", "AWS"],
   },
+];
+
+export const GITHUB_PERSONAL = "https://github.com/AnchalRana21";
+
+export const personalProjects: Project[] = [
+  {
+    meta: "Personal · 2025",
+    title: "Voice to Blog",
+    body: "Record a voice note in the browser and get back a structured, SEO-ready blog post. Runs fully local: Whisper transcribes the audio and an Ollama model writes the post.",
+    points: [
+      "In-browser recorder built on MediaRecorder, with pause, resume, a time limit and a live waveform",
+      "FastAPI pipeline with separate transcribe and generate endpoints, temp-file cleanup in background tasks",
+      "Generated post previewed as Markdown with title, meta description, word count and reading time",
+    ],
+    highlight: "Speech to publishable post, no cloud APIs",
+    links: [
+      { label: "Source", href: `${GITHUB_PERSONAL}/audio-to-text`, host: "github.com/AnchalRana21/audio-to-text", primary: true },
+    ],
+    stack: ["Next.js 15", "TypeScript", "Tailwind v4", "FastAPI", "Whisper", "Ollama"],
+  },
+  {
+    meta: "Personal · 2025",
+    title: "Chatbot Landing Page",
+    body: "A marketing page for a GPT-4o customer-service chatbot product, built as reusable sections: navbar, hero with a trusted-by logo row, features and a book-a-demo block.",
+    highlight: "Responsive marketing page in Next.js and Tailwind",
+    links: [
+      { label: "Source", href: `${GITHUB_PERSONAL}/Chatbot-Landing-Page`, host: "github.com/AnchalRana21/Chatbot-Landing-Page", primary: true },
+    ],
+    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "next/image"],
+  },
+  {
+    meta: "Side project · 2025",
+    live: true,
+    title: "Resume site for a finance accountant",
+    body: "A single-page online resume, deployed on Vercel, with a print stylesheet so the same page exports cleanly to PDF.",
+    highlight: "One page for the web and for print",
+    links: [
+      { label: "Live site", href: "https://harsh-rana-resume.vercel.app", host: "harsh-rana-resume.vercel.app", primary: true },
+      { label: "Source", href: `${GITHUB_PERSONAL}/Harsh-Rana-Resume`, host: "github.com/AnchalRana21/Harsh-Rana-Resume" },
+    ],
+    stack: ["HTML", "CSS", "Vercel"],
+  },
   {
     meta: "MCA Project · 2023",
     title: "Job Search Portal",

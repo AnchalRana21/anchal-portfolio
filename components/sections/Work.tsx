@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "@/components/Icons";
-import { GITHUB, projects, type Project } from "@/lib/data";
+import { GITHUB, GITHUB_PERSONAL, personalProjects, projects, type Project } from "@/lib/data";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -64,6 +64,17 @@ export function Work() {
       </div>
       <div className="work-list">
         {projects.map((p) => (
+          <ProjectCard key={p.title} project={p} />
+        ))}
+      </div>
+      <div className="work-sub">
+        <h3 className="label accent">Personal projects</h3>
+        <a className="label muted" href={GITHUB_PERSONAL}>
+          Personal GitHub →
+        </a>
+      </div>
+      <div className="work-list">
+        {personalProjects.map((p) => (
           <ProjectCard key={p.title} project={p} />
         ))}
       </div>
